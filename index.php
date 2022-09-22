@@ -62,7 +62,7 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-file-earmark-check"></i> <span>Regitred</span></a></li>
+          <li><a href="#" class="nav-link scrollto active"><i class="bi bi-file-earmark-check"></i> <span>Regitred</span></a></li>
           <li><a href="reg_new.php" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Add New</span></a></li>
           <li><a href="login.php" class="nav-link scrollto"><i class="bi bi-box-arrow-left"></i> <span>Log out</span></a></li>
         </ul>
@@ -74,7 +74,7 @@
   <main id="main"><!-- Start #main -->
 
         <div class="tittle m-3">
-          <h2 class="h2">New Records</h2>
+          <h2 class="h2">Recorded Chilren </h2>
         </div>
     <div class="container-fluid mt-3">
     
@@ -83,7 +83,7 @@
 
           <?php foreach($results as $result) {?>
 
-            <a href="reg_new.php?id=<?php echo ($result['child_id']);?>">
+            <a href="review_new.php?id=<?php echo ($result['child_id']);?>">
               <div class="container px-1"> 
                   <div class="row gx-3">
                     <div class="col">

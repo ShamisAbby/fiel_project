@@ -73,7 +73,7 @@
   <main id="main"><!-- Start #main -->
 
   <div class="tittle m-3">
-    <h2 class="h2">New Records</h>
+    <h2 class="h2">New Children</h>
   </div>
   <div class="container-fluid container-height mt-3">
       <div class="row">
