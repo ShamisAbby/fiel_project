@@ -1,5 +1,7 @@
 <?php
 
+  session_start();
+
   include('db_connect.php');
 
   $sql = "SELECT * FROM Child_info";
@@ -74,7 +76,7 @@
         <div class="tittle m-3">
           <h2 class="h2">New Records</h2>
         </div>
-    <div class="container-fluid container-height mt-3">
+    <div class="container-fluid mt-3">
     
       <div class="row">
         <div class="col-md-8">
@@ -130,5 +132,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

@@ -223,13 +223,14 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and(max-width: 760px){
   h4{
-      font-size: 5px;
+      font-size: 15px;
   }
 }
 
 
 /* <!--============= Mwanzo wa footer container ================--> */
 .footer{
+  bottom: 0;
   background-color: #040b14;
   margin-top: 10px;
   margin-bottom: 0px;

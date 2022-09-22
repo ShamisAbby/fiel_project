@@ -2,34 +2,67 @@
 
 include('db_connect.php');
 
+$admin = "Hospital";
+$user = "zcsra";
+$password = "12345678";
+
  if(isset($_POST['submit'])){
 
-    $sql = "SELECT * FROM log_in";
+  
+    if($_POST['name'] == $admin and $_POST['password'] == $password){
+        header('Location: index.php');
+        echo "<script> alert('login successfuly')</script>";
 
-    $results = mysqli_query($conn,$sql);
 
-    $all = mysqli_fetch_all($results, MYSQLI_ASSOC);
+    }elseif($_POST['name'] == $user and $_POST['password'] == $password){
+        header('Location: new_child.php');
+        echo "<script> alert('login successfuly')</script>";
 
-    $user_name = $_POST['name'];
 
-    $user_mail = $_POST['mail'];
-
-    echo "<script> alert('Login successfuly')</script>";
-
-    foreach($results as $result){
-
-        if($user_name == $result['user_name']){
-            header ('Location: index.php');
-        }else{
-            if($user_name == $result['user_name']){
-                header ('Location: new_child.php'); 
-            }
+    }else{
+            echo "<script> alert('incorrect user name or password')</script>";
         }
+
+        // echo $result['user_name'];
+
+    
+
+    // if($all){
+    //     foreach($results as $result){
+    //         $_SESSION['user'] = $result['user_name'];
+    //         $_SESSION['role'] = $result['role'];
+
+
+    //         header('Location: index.php');
+
+    //     }
+    // }
+
+
+
+
+    
+
+    // $user_name = $_POST['name'];
+
+    // $user_mail = $_POST['mail'];
+
+    // echo "<script> alert('Login successfuly')</script>";
+
+    // foreach($results as $result){
+
+    //     if($user_name == $result['user_name']){
+    //         header ('Location: index.php');
+    //     }else{
+    //         if($user_name == $result['user_name']){
+    //             header ('Location: new_child.php'); 
+    //         }
+    //     }
 
 
         // echo $result['user_name'];
         // echo $result['user_password'];
-    }
+    // }
 
     // echo $recoded_name;
     // echo $user_name;
@@ -70,8 +103,8 @@ include('db_connect.php');
             </div>
 
             <div class="mb-3">
-                <label for="mail" class="form-label">Email address:</label>
-                <input type="email" class="form-control" name="mail" required>
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" name="password" required>
             </div>
 
             <div class="mb-3 mt-3 text-center">
